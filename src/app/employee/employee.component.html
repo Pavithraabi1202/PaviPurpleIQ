@@ -1,0 +1,36 @@
+<div class="card-box">
+  <div class="row">
+    <div class="col-sm-4">
+      <a routerLink="create" id="addbtn" class="btn btn-success btn-rounded">Add New</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Reference ID</th>
+            <th>Employee Name</th>
+            <th>Employee ID</th>
+            <th>Department</th>
+            <th>Designation</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of employeeList">
+            <td>{{item.referenceId}}</td>
+            <td>{{item.employeeName}}</td>
+            <td>{{item.employeeId}}</td>
+            <td>{{item.department}}</td>
+            <td>{{item.designation}}</td>
+            <td>
+              <button routerLink="/Edit/{{item.id}}" class="btn btn-primary">Edit</button>
+              <button (click)="delete(item.id)" class="btn btn-danger">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

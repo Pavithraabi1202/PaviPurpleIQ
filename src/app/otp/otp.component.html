@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-lg-6" style="background: #7030a0; height: 600px;"  >
+    <div> </div>
+  
+  </div>
+  <div class="col-lg-6 text-black"> 
+    <h4 style="text-align: center; padding:30px; height: 20px;" >Two Factor Authentication</h4>
+    <h6 style="text-align: center; padding:5px;"> Thanks for keeping your account secure, Protecting your account is our priority please check your E-mail ID.</h6>
+
+      <div class="container-fluid" style="margin-top: 10%;">
+        <div class="row">
+      <div class="offset-lg-3 col-lg-6">
+      <div class="card-box" style="background-color:white">
+        <form [formGroup]="OTPForm" >  
+            <div class="row">
+              <div class="offset-lg-3 col-lg-6">
+                <div class="form-group">
+                  <label for="UserCode">OTP</label>
+                  <input type="text" id="UserCode" class="form-control" formControlName="UserCode"
+                    placeholder="Enter OTP" autocomplete="on" />
+                </div>
+              </div>
+          
+                    </div>
+          
+            <div class="offset-lg-3 col-lg-2">
+              <br />
+              <div class="form-group" style="text-align: center">
+                <button type="submit" (click)="ProceedOTP()"  class="btn btn-primary btn-lg btn-block" style="background-color: #7030a0;">
+                  Submit
+                </button>
+              
+              </div>
+            </div>
+          
+          </form>
+      </div>
+      
+        </div>
+      </div>
+    
+  </div>
+</div>
